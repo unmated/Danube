@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 
 public class NavigationFrame extends JFrame {
 
+	private static final long serialVersionUID = 1587714278272763583L;
 	boolean root;
 	private NavigationFrame nf;
 
@@ -14,6 +15,8 @@ public class NavigationFrame extends JFrame {
 		initComponents();
 		staffMgmtBtn.setVisible(adm);
 		roomMgmtBtn.setVisible(adm);
+		// Should be removed
+		logoutBtn.setVisible(false);
 	}
 
 	public NavigationFrame(Login l) {
@@ -27,9 +30,6 @@ public class NavigationFrame extends JFrame {
 		this.setVisible(vis);
 	}
 
-	@SuppressWarnings("unchecked")
-	// <editor-fold defaultstate="collapsed" desc="Generated
-	// Code">//GEN-BEGIN:initComponents
 	private void initComponents() {
 
 		jPanel1 = new javax.swing.JPanel();
