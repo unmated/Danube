@@ -34,7 +34,7 @@ public class BookingMang extends javax.swing.JFrame {
 		this.setLocationRelativeTo(null);
 
 		String guery = "select * from bookingtable;";
-		String gueryy = "SELECT Cust_No, Cust_name FROM custdetail,bookingtable where custdetail.book_id=bookingtable.book_id;";
+		String gueryy = "SELECT Cust_id_no, Cust_name FROM custdetail,bookingtable where custdetail.book_id=bookingtable.book_id;";
 		rsBook = new SQLQuery(guery).callRs();
 		rsName = new SQLQuery(gueryy).callRs();
 		sdf = new SimpleDateFormat("dd-MMM-yyyy");

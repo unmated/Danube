@@ -33,7 +33,7 @@ public class CustomerMang extends javax.swing.JFrame {
 		sdf = new SimpleDateFormat("dd-MMM-yyyy");
 
 		try {
-			String query = "SELECT * FROM custdetail ORDER BY Cust_No;";
+			String query = "SELECT * FROM custdetail ORDER BY Cust_id_no;";
 			String queryy = "SELECT room_no FROM custdetail,bookingtable where custdetail.book_id=bookingtable.book_id;";
 			String date = "SELECT date_fro, date_to FROM custdetail,bookingtable where custdetail.book_id=bookingtable.book_id;";
 			rs = new SQLQuery(query).callRs();

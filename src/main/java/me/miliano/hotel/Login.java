@@ -22,8 +22,8 @@ public class Login extends javax.swing.JFrame {
 	public Login() {
 		initComponents();
 
-		NavigationFrame nf = new NavigationFrame(this, Session.admin);
-		nf.setVisible(true);
+//		NavigationFrame nf = new NavigationFrame(this, Session.admin);
+//		nf.setVisible(true);
 	}
 
 	private void initComponents() {
@@ -156,13 +156,13 @@ public class Login extends javax.swing.JFrame {
 				} catch (InterruptedException ex) {
 					Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
 				}
-				// login();
+				 login();
 
 			}
 		};
 
-		logoLabel.setVisible(false);
-		// logoLabel1.setVisible(true);
+		logoLabel.setVisible(true);
+		//logoLabel1.setVisible(true);
 		thread.start();
 
 	}// GEN-LAST:event_loginBtnActionPerformed
@@ -180,7 +180,7 @@ public class Login extends javax.swing.JFrame {
 				System.out.println(rs.getString(3));
 				if (log.equals(rs.getString(1)) && pass.equals(rs.getString(2))) {
 					flag = 1;
-					if (rs.getString(3).equals("admin")) {
+					if (rs.getString(3).equals("1")) {
 						new Session(true);
 					} else {
 						new Session(false);
@@ -223,7 +223,7 @@ public class Login extends javax.swing.JFrame {
 		java.awt.EventQueue.invokeLater(new Runnable() {
 
 			public void run() {
-				new Login().setVisible(false);
+				new Login().setVisible(true);
 			}
 		});
 	}

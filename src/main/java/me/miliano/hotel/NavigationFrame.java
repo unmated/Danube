@@ -15,8 +15,7 @@ public class NavigationFrame extends JFrame {
 		initComponents();
 		staffMgmtBtn.setVisible(adm);
 		roomMgmtBtn.setVisible(adm);
-		// Should be removed
-		logoutBtn.setVisible(false);
+		logoutBtn.setVisible(true);
 	}
 
 	public NavigationFrame(Login l) {
