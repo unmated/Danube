@@ -5,16 +5,22 @@ import javax.swing.JFrame;
 public class NavigationFrame extends JFrame {
 
 	private static final long serialVersionUID = 1587714278272763583L;
-	boolean root;
 	private NavigationFrame nf;
 
-	public NavigationFrame(Login l, boolean adm) {
-		this.root = adm;
+	public NavigationFrame(Login l, ROLE adm) {
 		l.setVisible(false);
 		nf = this;
 		initComponents();
-		staffMgmtBtn.setVisible(adm);
-		roomMgmtBtn.setVisible(adm);
+		if(adm == ROLE.RECEPTIONER) {
+			staffMgmtBtn.setVisible(false);
+			roomMgmtBtn.setVisible(false);
+		}else if (adm == ROLE.CLIENT) {
+			bookingMgmtBtn.setVisible(false);
+			visitorMgmtBtn.setVisible(false);
+			staffMgmtBtn.setVisible(false);
+			roomMgmtBtn.setVisible(false);
+		}
+		
 		logoutBtn.setVisible(true);
 	}
 

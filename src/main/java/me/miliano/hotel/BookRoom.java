@@ -396,12 +396,12 @@ public class BookRoom extends javax.swing.JFrame {
 							+ "','" + cnation + "','" + cpur + "'," + amt + ",'" + bookid + "');";
 					smt1 = con.createStatement();
 					int ins = smt1.executeUpdate(insqlcust);
-					String insqlbook = "insert into bookingtable (book_id,room_no,date_fro,date_to,no_of_day) values( '"
-							+ bookid + "','" + roomno + "','" + dt1 + "','" + dt2 + "','" + diffd + "');";
+					String insqlbook = "insert into bookingtable (book_id,room_no,date_fro,date_to,no_of_day,confirm_status) values( '"
+							+ bookid + "','" + roomno + "','" + dt1 + "','" + dt2 + "','" + diffd + "','" + (Session.role==ROLE.ADMIN || Session.role==ROLE.RECEPTIONER?1:0) + "');";
 					smt2 = con.createStatement();
 					int ins1 = smt1.executeUpdate(insqlbook);
 
-					int res = JOptionPane.showOptionDialog(this, "Room Booked", "Tesnnt", JOptionPane.DEFAULT_OPTION,
+					int res = JOptionPane.showOptionDialog(this, "Room Booked", "Confirmation", JOptionPane.DEFAULT_OPTION,
 							JOptionPane.INFORMATION_MESSAGE, null, null, null);
 					if (res == 0 || res == -1) {
 
@@ -418,7 +418,7 @@ public class BookRoom extends javax.swing.JFrame {
 			}
 
 		} else {
-			new ErrDialog(this, "Wrong input, make sure u filles all fields");
+			new ErrDialog(this, "Wrong input, make sure all fields are correct");
 		}
 	}// GEN-LAST:event_jButton1ActionPerformed
 

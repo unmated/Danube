@@ -23,7 +23,7 @@ public class CustomerMang extends javax.swing.JFrame {
 			@Override
 			public void windowClosing(java.awt.event.WindowEvent windowEvent) {
 				Login l = new Login();
-				NavigationFrame n = new NavigationFrame(l, Session.admin);
+				NavigationFrame n = new NavigationFrame(l, Session.role);
 				n.setVisible(true);
 				System.out.println("Closed");
 			}

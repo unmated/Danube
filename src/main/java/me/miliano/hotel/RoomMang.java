@@ -28,7 +28,7 @@ public class RoomMang extends javax.swing.JFrame {
 			public void windowClosing(java.awt.event.WindowEvent windowEvent) {
 				// System.exit(0);
 				Login l = new Login();
-				NavigationFrame n = new NavigationFrame(l, Session.admin);
+				NavigationFrame n = new NavigationFrame(l, Session.role);
 				n.setVisible(true);
 				System.out.println("Closed");
 			}

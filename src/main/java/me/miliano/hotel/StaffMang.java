@@ -48,7 +48,7 @@ public class StaffMang extends javax.swing.JFrame {
 	private void menu() {
 
 		Login l = new Login();
-		NavigationFrame n = new NavigationFrame(l, Session.admin);
+		NavigationFrame n = new NavigationFrame(l, Session.role);
 		n.setVisible(true);
 		this.dispose();
 	}

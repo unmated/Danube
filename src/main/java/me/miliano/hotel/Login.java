@@ -147,8 +147,7 @@ public class Login extends javax.swing.JFrame {
 	}// GEN-LAST:event_cancelLoginBtnActionPerformed
 
 	private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_loginBtnActionPerformed
-		Thread thread = new Thread() {
-			public void run() {
+			Thread thread = new Thread(() -> {
 				System.out.println("Login Thread Running");
 				loginBtn.setEnabled(false);
 				try {
@@ -157,12 +156,9 @@ public class Login extends javax.swing.JFrame {
 					Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
 				}
 				 login();
-
-			}
-		};
+});
 
 		logoLabel.setVisible(true);
-		//logoLabel1.setVisible(true);
 		thread.start();
 
 	}// GEN-LAST:event_loginBtnActionPerformed
@@ -180,10 +176,12 @@ public class Login extends javax.swing.JFrame {
 				System.out.println(rs.getString(3));
 				if (log.equals(rs.getString(1)) && pass.equals(rs.getString(2))) {
 					flag = 1;
-					if (rs.getString(3).equals("1")) {
-						new Session(true);
-					} else {
-						new Session(false);
+					if (rs.getString(3).equals("Admin")) {
+						new Session(ROLE.ADMIN);
+					} else if (rs.getString(3).equals("Receptioner")) {
+						new Session(ROLE.RECEPTIONER);
+					}else {
+						new Session(ROLE.CLIENT);
 					}
 					break;
 				}
@@ -197,7 +195,7 @@ public class Login extends javax.swing.JFrame {
 				passField.setEnabled(false);
 				loginBtn.setEnabled(false);
 				cancelLoginBtn.setEnabled(false);
-				NavigationFrame nf = new NavigationFrame(this, Session.admin);
+				NavigationFrame nf = new NavigationFrame(this, Session.role);
 				nf.setVisible(true);
 
 			} else {

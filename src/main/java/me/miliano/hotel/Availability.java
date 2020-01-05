@@ -36,7 +36,7 @@ public class Availability extends javax.swing.JFrame {
 			@Override
 			public void windowClosing(java.awt.event.WindowEvent windowEvent) {
 				// System.exit(0);
-				NavigationFrame n = new NavigationFrame(new Login(), Session.admin);
+				NavigationFrame n = new NavigationFrame(new Login(), Session.role);
 				n.setVisible(true);
 				System.out.println("Closed");
 			}
@@ -216,7 +216,7 @@ public class Availability extends javax.swing.JFrame {
 
 	private void closeBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_closeBtnActionPerformed
 		Login l = new Login();
-		NavigationFrame n = new NavigationFrame(l, Session.admin);
+		NavigationFrame n = new NavigationFrame(l, Session.role);
 		n.setVisible(true);
 		System.out.println("Closed");
 		this.dispose();

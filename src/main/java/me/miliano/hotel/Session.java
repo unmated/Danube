@@ -1,12 +1,13 @@
 package me.miliano.hotel;
 
 public class Session {
-	public static boolean admin = true;
+	public static ROLE role = ROLE.CLIENT;
 
-	public Session(boolean a) {
-		admin = a;
-
-		System.out.println("Admin : " + admin);
+	public Session(ROLE role) {
+		Session.role = role;
 	}
 
 }
+	enum ROLE{
+		ADMIN,RECEPTIONER,CLIENT
+	}
