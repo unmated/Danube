@@ -7,8 +7,8 @@ import java.sql.Statement;
 public class DB {
 	private final String host = "miliano.tech";
 	private final String db = "hotel";
-	private final String user = "pie";
-	private final String pass = "pieproj";
+	private final String user = "root";
+	private final String pass = "rootpass";
 
 	private Statement stmt;
 	private Connection conn;
