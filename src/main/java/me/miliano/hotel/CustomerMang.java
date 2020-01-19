@@ -4,9 +4,11 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
-
+import javax.swing.JTextField;
+import javax.swing.JLabel;
 import javax.swing.JFrame;
-
+import javax.swing.JButton;
+import javax.swing.JPanel;
 public class CustomerMang extends javax.swing.JFrame {
 
 	Connection con;
@@ -55,51 +57,51 @@ public class CustomerMang extends javax.swing.JFrame {
 	// Code">//GEN-BEGIN:initComponents
 	private void initComponents() {
 
-		jPanel1 = new javax.swing.JPanel();
-		jLabel2 = new javax.swing.JLabel();
-		jLabel3 = new javax.swing.JLabel();
-		jLabel4 = new javax.swing.JLabel();
-		jLabel5 = new javax.swing.JLabel();
-		jLabel6 = new javax.swing.JLabel();
-		jLabel7 = new javax.swing.JLabel();
-		jLabel8 = new javax.swing.JLabel();
-		jLabel9 = new javax.swing.JLabel();
-		jLabel10 = new javax.swing.JLabel();
-		jLabel11 = new javax.swing.JLabel();
-		jLabel12 = new javax.swing.JLabel();
-		jLabel13 = new javax.swing.JLabel();
-		jLabel14 = new javax.swing.JLabel();
-		jLabel15 = new javax.swing.JLabel();
-		jLabel16 = new javax.swing.JLabel();
-		nameField = new javax.swing.JTextField();
-		addrField = new javax.swing.JTextField();
-		cityField = new javax.swing.JTextField();
-		statField = new javax.swing.JTextField();
-		countryField = new javax.swing.JTextField();
-		phoneField = new javax.swing.JTextField();
-		idPtoofField = new javax.swing.JTextField();
-		idNumField = new javax.swing.JTextField();
-		jTextField9 = new javax.swing.JTextField();
-		jTextField10 = new javax.swing.JTextField();
-		jTextField11 = new javax.swing.JTextField();
-		jTextField12 = new javax.swing.JTextField();
-		jTextField13 = new javax.swing.JTextField();
-		jTextField14 = new javax.swing.JTextField();
-		jTextField15 = new javax.swing.JTextField();
-		jLabel17 = new javax.swing.JLabel();
-		jLabel18 = new javax.swing.JLabel();
-		arrField = new javax.swing.JTextField();
-		departureField = new javax.swing.JTextField();
-		first = new javax.swing.JButton();
-		next = new javax.swing.JButton();
-		last = new javax.swing.JButton();
-		previous = new javax.swing.JButton();
-		jLabel25 = new javax.swing.JLabel();
-		jLabel26 = new javax.swing.JLabel();
-		visitorNoField = new javax.swing.JLabel();
-		jLabel28 = new javax.swing.JLabel();
-		roomNoField = new javax.swing.JLabel();
-		logoLabel = new javax.swing.JLabel();
+		jPanel1 = new JPanel();
+		jLabel2 = new JLabel();
+		jLabel3 = new JLabel();
+		jLabel4 = new JLabel();
+		jLabel5 = new JLabel();
+		jLabel6 = new JLabel();
+		jLabel7 = new JLabel();
+		jLabel8 = new JLabel();
+		jLabel9 = new JLabel();
+		jLabel10 = new JLabel();
+		jLabel11 = new JLabel();
+		jLabel12 = new JLabel();
+		jLabel13 = new JLabel();
+		jLabel14 = new JLabel();
+		jLabel15 = new JLabel();
+		jLabel16 = new JLabel();
+		nameField = new JTextField();
+		addrField = new JTextField();
+		cityField = new JTextField();
+		statField = new JTextField();
+		countryField = new JTextField();
+		phoneField = new JTextField();
+		idPtoofField = new JTextField();
+		idNumField = new JTextField();
+		jTextField9 = new JTextField();
+		jTextField10 = new JTextField();
+		jTextField11 = new JTextField();
+		jTextField12 = new JTextField();
+		jTextField13 = new JTextField();
+		jTextField14 = new JTextField();
+		jTextField15 = new JTextField();
+		jLabel17 = new JLabel();
+		jLabel18 = new JLabel();
+		arrField = new JTextField();
+		departureField = new JTextField();
+		first = new JButton();
+		next = new JButton();
+		last = new JButton();
+		previous = new JButton();
+		jLabel25 = new JLabel();
+		jLabel26 = new JLabel();
+		visitorNoField = new JLabel();
+		jLabel28 = new JLabel();
+		roomNoField = new JLabel();
+		logoLabel = new JLabel();
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 		setResizable(false);
@@ -614,50 +616,13 @@ public class CustomerMang extends javax.swing.JFrame {
 	}
 
 	// Variables declaration - do not modify//GEN-BEGIN:variables
-	private javax.swing.JTextField addrField;
-	private javax.swing.JTextField arrField;
-	private javax.swing.JTextField cityField;
-	private javax.swing.JTextField countryField;
-	private javax.swing.JTextField departureField;
-	private javax.swing.JButton first;
-	private javax.swing.JTextField idNumField;
-	private javax.swing.JTextField idPtoofField;
-	private javax.swing.JLabel jLabel10;
-	private javax.swing.JLabel jLabel11;
-	private javax.swing.JLabel jLabel12;
-	private javax.swing.JLabel jLabel13;
-	private javax.swing.JLabel jLabel14;
-	private javax.swing.JLabel jLabel15;
-	private javax.swing.JLabel jLabel16;
-	private javax.swing.JLabel jLabel17;
-	private javax.swing.JLabel jLabel18;
-	private javax.swing.JLabel jLabel2;
-	private javax.swing.JLabel jLabel25;
-	private javax.swing.JLabel jLabel26;
-	private javax.swing.JLabel jLabel28;
-	private javax.swing.JLabel jLabel3;
-	private javax.swing.JLabel jLabel4;
-	private javax.swing.JLabel jLabel5;
-	private javax.swing.JLabel jLabel6;
-	private javax.swing.JLabel jLabel7;
-	private javax.swing.JLabel jLabel8;
-	private javax.swing.JLabel jLabel9;
-	private javax.swing.JPanel jPanel1;
-	private javax.swing.JTextField jTextField10;
-	private javax.swing.JTextField jTextField11;
-	private javax.swing.JTextField jTextField12;
-	private javax.swing.JTextField jTextField13;
-	private javax.swing.JTextField jTextField14;
-	private javax.swing.JTextField jTextField15;
-	private javax.swing.JTextField jTextField9;
-	private javax.swing.JButton last;
-	private javax.swing.JLabel logoLabel;
-	private javax.swing.JTextField nameField;
-	private javax.swing.JButton next;
-	private javax.swing.JTextField phoneField;
-	private javax.swing.JButton previous;
-	private javax.swing.JLabel roomNoField;
-	private javax.swing.JTextField statField;
-	private javax.swing.JLabel visitorNoField;
+	private JPanel jPanel1;
+	private JLabel logoLabel,roomNoField,visitorNoField;
+	private JButton first,last,next,previous;
+	private JLabel jLabel9,jLabel8,jLabel7,jLabel6,jLabel5,jLabel4,jLabel3,jLabel28,jLabel26,jLabel25,jLabel2,jLabel18,
+				   jLabel17,jLabel16,jLabel15,jLabel14,jLabel13,jLabel12,jLabel11,jLabel10;
+	private JTextField addrField,arrField,cityField,countryField,departureField,idNumField,idPtoofField,
+					   nameField,phoneField,statField;
+	private JTextField jTextField10,jTextField9,jTextField15,jTextField14,jTextField13,jTextField12,jTextField11;
 	// End of variables declaration//GEN-END:variables
 }
