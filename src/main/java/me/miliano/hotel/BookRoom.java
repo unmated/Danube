@@ -23,7 +23,6 @@ public class BookRoom extends javax.swing.JFrame {
 	String diffd;
 	int amt, bookid;
 	String dt1, dt2;
-
 	/** Creates new form BookRoom */
 	public BookRoom(Object o1, Object o2, Object o3, Object o4, Date o5, Date o6, String diff) {
 		initComponents();
@@ -37,7 +36,6 @@ public class BookRoom extends javax.swing.JFrame {
 			}
 		});
 		try {
-
 			SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy");
 			SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
 			roomno = o1.toString();
@@ -60,13 +58,11 @@ public class BookRoom extends javax.swing.JFrame {
 				diffd = diff;
 			}
 		} catch (Exception ex) {
-
+			ex.printStackTrace();
+			System.out.println(ex.getMessage());
 		}
 	}
-
 	@SuppressWarnings("unchecked")
-	// <editor-fold defaultstate="collapsed" desc="Generated
-	// Code">//GEN-BEGIN:initComponents
 	private void initComponents() {
 
 		jPanel1 = new javax.swing.JPanel();
