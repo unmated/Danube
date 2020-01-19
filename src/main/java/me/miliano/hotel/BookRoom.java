@@ -9,7 +9,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class BookRoom extends javax.swing.JFrame {
@@ -23,7 +26,6 @@ public class BookRoom extends javax.swing.JFrame {
 	String diffd;
 	int amt, bookid;
 	String dt1, dt2;
-
 	/** Creates new form BookRoom */
 	public BookRoom(Object o1, Object o2, Object o3, Object o4, Date o5, Date o6, String diff) {
 		initComponents();
@@ -37,7 +39,6 @@ public class BookRoom extends javax.swing.JFrame {
 			}
 		});
 		try {
-
 			SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy");
 			SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
 			roomno = o1.toString();
@@ -60,61 +61,59 @@ public class BookRoom extends javax.swing.JFrame {
 				diffd = diff;
 			}
 		} catch (Exception ex) {
-
+			ex.printStackTrace();
+			System.out.println(ex.getMessage());
 		}
 	}
-
 	@SuppressWarnings("unchecked")
-	// <editor-fold defaultstate="collapsed" desc="Generated
-	// Code">//GEN-BEGIN:initComponents
 	private void initComponents() {
 
-		jPanel1 = new javax.swing.JPanel();
-		jPanel2 = new javax.swing.JPanel();
-		jLabel16 = new javax.swing.JLabel();
-		jLabel17 = new javax.swing.JLabel();
-		custName = new javax.swing.JTextField();
-		jLabel18 = new javax.swing.JLabel();
-		address = new javax.swing.JTextField();
-		jLabel19 = new javax.swing.JLabel();
-		city = new javax.swing.JTextField();
-		jLabel20 = new javax.swing.JLabel();
-		contry = new javax.swing.JTextField();
-		jLabel21 = new javax.swing.JLabel();
-		phone = new javax.swing.JTextField();
-		jLabel22 = new javax.swing.JLabel();
-		nationality = new javax.swing.JTextField();
-		jLabel23 = new javax.swing.JLabel();
-		purp = new javax.swing.JTextField();
-		jLabel24 = new javax.swing.JLabel();
-		idProof = new javax.swing.JTextField();
-		jLabel25 = new javax.swing.JLabel();
-		idNUmber = new javax.swing.JTextField();
-		jLabel26 = new javax.swing.JLabel();
-		nrOfAdults = new javax.swing.JTextField();
-		jLabel27 = new javax.swing.JLabel();
-		nrOfMinors = new javax.swing.JTextField();
-		jLabel29 = new javax.swing.JLabel();
-		maritStatus = new javax.swing.JTextField();
-		jLabel30 = new javax.swing.JLabel();
-		priceArea = new javax.swing.JTextField();
-		jButton1 = new javax.swing.JButton();
-		jLabel28 = new javax.swing.JLabel();
-		nrDays = new javax.swing.JTextField();
-		state = new javax.swing.JTextField();
-		jLabel3 = new javax.swing.JLabel();
-		jLabel4 = new javax.swing.JLabel();
-		jLabel5 = new javax.swing.JLabel();
-		jLabel6 = new javax.swing.JLabel();
-		jLabel7 = new javax.swing.JLabel();
-		jLabel8 = new javax.swing.JLabel();
-		jLabel9 = new javax.swing.JLabel();
-		jLabel10 = new javax.swing.JLabel();
-		jLabel11 = new javax.swing.JLabel();
-		jLabel12 = new javax.swing.JLabel();
-		jLabel13 = new javax.swing.JLabel();
-		jLabel14 = new javax.swing.JLabel();
-		jLabel1 = new javax.swing.JLabel();
+		jPanel1 = new JPanel();
+		jPanel2 = new JPanel();
+		jLabel16 = new JLabel();
+		jLabel17 = new JLabel();
+		custName = new JTextField();
+		jLabel18 = new JLabel();
+		address = new JTextField();
+		jLabel19 = new JLabel();
+		city = new JTextField();
+		jLabel20 = new JLabel();
+		contry = new JTextField();
+		jLabel21 = new JLabel();
+		phone = new JTextField();
+		jLabel22 = new JLabel();
+		nationality = new JTextField();
+		jLabel23 = new JLabel();
+		purp = new JTextField();
+		jLabel24 = new JLabel();
+		idProof = new JTextField();
+		jLabel25 = new JLabel();
+		idNUmber = new JTextField();
+		jLabel26 = new JLabel();
+		nrOfAdults = new JTextField();
+		jLabel27 = new JLabel();
+		nrOfMinors = new JTextField();
+		jLabel29 = new JLabel();
+		maritStatus = new JTextField();
+		jLabel30 = new JLabel();
+		priceArea = new JTextField();
+		jButton1 = new JButton();
+		jLabel28 = new JLabel();
+		nrDays = new JTextField();
+		state = new JTextField();
+		jLabel3 = new JLabel();
+		jLabel4 = new JLabel();
+		jLabel5 = new JLabel();
+		jLabel6 = new JLabel();
+		jLabel7 = new JLabel();
+		jLabel8 = new JLabel();
+		jLabel9 = new JLabel();
+		jLabel10 = new JLabel();
+		jLabel11 = new JLabel();
+		jLabel12 = new JLabel();
+		jLabel13 = new JLabel();
+		jLabel14 = new JLabel();
+		jLabel1 = new JLabel();
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 		setTitle("Booking Form");
@@ -423,51 +422,12 @@ public class BookRoom extends javax.swing.JFrame {
 	}// GEN-LAST:event_jButton1ActionPerformed
 
 	// Variables declaration - do not modify//GEN-BEGIN:variables
-	private javax.swing.JTextField address;
-	private javax.swing.JTextField city;
-	private javax.swing.JTextField contry;
-	private javax.swing.JTextField custName;
-	private javax.swing.JTextField idNUmber;
-	private javax.swing.JTextField idProof;
-	private javax.swing.JButton jButton1;
-	private javax.swing.JLabel jLabel1;
-	private javax.swing.JLabel jLabel10;
-	private javax.swing.JLabel jLabel11;
-	private javax.swing.JLabel jLabel12;
-	private javax.swing.JLabel jLabel13;
-	private javax.swing.JLabel jLabel14;
-	private javax.swing.JLabel jLabel16;
-	private javax.swing.JLabel jLabel17;
-	private javax.swing.JLabel jLabel18;
-	private javax.swing.JLabel jLabel19;
-	private javax.swing.JLabel jLabel20;
-	private javax.swing.JLabel jLabel21;
-	private javax.swing.JLabel jLabel22;
-	private javax.swing.JLabel jLabel23;
-	private javax.swing.JLabel jLabel24;
-	private javax.swing.JLabel jLabel25;
-	private javax.swing.JLabel jLabel26;
-	private javax.swing.JLabel jLabel27;
-	private javax.swing.JLabel jLabel28;
-	private javax.swing.JLabel jLabel29;
-	private javax.swing.JLabel jLabel3;
-	private javax.swing.JLabel jLabel30;
-	private javax.swing.JLabel jLabel4;
-	private javax.swing.JLabel jLabel5;
-	private javax.swing.JLabel jLabel6;
-	private javax.swing.JLabel jLabel7;
-	private javax.swing.JLabel jLabel8;
-	private javax.swing.JLabel jLabel9;
-	private javax.swing.JPanel jPanel1;
-	private javax.swing.JPanel jPanel2;
-	private javax.swing.JTextField maritStatus;
-	private javax.swing.JTextField nationality;
-	private javax.swing.JTextField nrDays;
-	private javax.swing.JTextField nrOfAdults;
-	private javax.swing.JTextField nrOfMinors;
-	private javax.swing.JTextField phone;
-	private javax.swing.JTextField priceArea;
-	private javax.swing.JTextField purp;
-	private javax.swing.JTextField state;
+	private JTextField address,city,contry,custName,idNUmber,idProof;
+	private JButton jButton1;
+	private JLabel jLabel1,jLabel10,jLabel11,jLabel12,jLabel13,jLabel14,jLabel16,jLabel17,jLabel18,
+				   jLabel19,jLabel20,jLabel21,jLabel22,jLabel23,jLabel24,jLabel25,jLabel26,jLabel27,
+				   jLabel28,jLabel29,jLabel3,jLabel30,jLabel4,jLabel5,jLabel6,jLabel7,jLabel8,jLabel9;
+	private JTextField maritStatus,nationality,nrDays,nrOfAdults,nrOfMinors,phone,priceArea,purp,state;
+	private JPanel jPanel1,jPanel2;
 	// End of variables declaration//GEN-END:variables
 }
